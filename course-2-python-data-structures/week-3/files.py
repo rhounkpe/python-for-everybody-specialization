@@ -1,5 +1,6 @@
 # Open file
 mbox_short = open('../material/mbox-short.txt')
+inp = mbox_short.read()
 #
 # Read file
 mbox = open('../material/mbox.txt') # 132045 lines
@@ -39,7 +40,7 @@ try:
 except:
     print('File cannot be opened: ', fname)
     quit()
-    
+
 count = 0
 for line in fhand:
     if line.startswith('Subject:'):

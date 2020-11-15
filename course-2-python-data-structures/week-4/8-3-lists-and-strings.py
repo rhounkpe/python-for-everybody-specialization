@@ -25,7 +25,9 @@ print(len(thing))
 
 # Open file
 mbox_short = open('../material/mbox-short.txt')
-# Read file
+# Read fileLists and strings
+git push
+
 mbox = open('../material/mbox.txt')
 
 for line in mbox_short:

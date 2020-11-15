@@ -15,7 +15,7 @@ You can download the sample data at http://www.py4e.com/code3/mbox-short.txt
 
 # Open the file mbox-short.txt and read it line by line.
 fname = input("Enter file name: ")
-if len(fname) < 1 : fname = "mbox-short.txt"
+if len(fname) < 1 : fname = "../material/mbox-short.txt"
 
 try:
     fh = open(fname)
@@ -26,6 +26,7 @@ count = 0
 
 for line in fh:
     # When you find a line that starts with 'From ',
+    line = line.rstrip()
     if not line.startswith('From '):
         continue
     # You will parse the From line using split()

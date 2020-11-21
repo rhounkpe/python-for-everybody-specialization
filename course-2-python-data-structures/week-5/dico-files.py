@@ -4,10 +4,17 @@ The general pattern to count the words in a line of text is to split
 words in a line into words, then loop through the words and use 
 a dictionary to track the count of each word independently.
 """
-
+# Retrieving lists of keys and values
+text = 'Even though dictionaries are not stored in order, we can write a for loop that goes through all the entries in a dictionary - actually it goes through all of the keys in the dictionary and looks up the values.'
 counts = dict()
 print('Enter a line of text: ')
+
+
 line = input('')
+
+if len(line.rstrip()) == 0:
+    line = text.rstrip()
+
 
 words = line.split()
 print('Words: ', words)
@@ -40,3 +47,13 @@ print(list(jjj))
 print(jjj.keys())
 print(jjj.values())
 print(jjj.items())
+
+
+# Two Iteration variables
+"""
+- We loop through the key-value pairs in a dictionary using *two* iteration variables.
+- Each iteration, the first variable is the key and the second variable is the corresponding value for the key.
+"""
+
+for k, v in jjj.items():
+    print(k, v)
